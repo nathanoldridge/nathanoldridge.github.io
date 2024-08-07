@@ -18,6 +18,7 @@ li.logo {
 li.nav {
   float: right;
 }
+p.regular{color:aliceblue; font-family:Arial, Helvetica, sans-serif; }
 
 a.nav {
   font-family: Arial, Helvetica, sans-serif;
@@ -41,6 +42,10 @@ p.footer{font-family: Arial, Helvetica, sans-serif; color:grey;}
 h1 {color:white;}
 h2{color:white;}
 img.logo {margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;}
+table.main {width:100%;}
+td{width:33%; color:yellow; text-align: center; vertical-align: top;}
+p.headline{font-size: larger; font-weight: bold;}
+p.explain{font-size:small; font-weight:lighter;}
 
     </style>
   </head>
@@ -56,16 +61,57 @@ img.logo {margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;}
     <!-- End navigation bar -->
     <h1>Nathan Oldridge</h1>
     <h2>Toronto's Best Chemistry Tutor (and Math Tutor)</h2>
-    <hr />    
-    <ul>
-        <li><b>M.Sc.</b> (Chemistry) from University of Toronto</li>
-        <li><b>B.Sc.</b> (Chemistry) from University of Waterloo</li>
-        <li>Ontario-Certified Teacher (<a href="https://apps.oct.ca/FindATeacher/memberdetail?id=591199">link</a>)</li>
-        <li>6 years of teaching in classrooms full-time</li>
-        <l1>6 years of one-on-one tutoring full time</l1>
-        <li>YouTube channel of Chemistry videos: 260K+ Subscribers (<a href="https://www.youtube.com/chemistnate">link</a>)</li>
-        <li>YouTube channel of math videos: 25K+ Subscribers (<a href="https://www.youtube.com/mroldridge">link</a>)</li>
-    </ul>
+    <hr />
+    <table class="main">
+        <tr>
+            <td width=33%>
+                <b>CREDENTIALS</b>
+                <p class="headline">M.Sc.</p>
+                <p class="explain">(Chemistry, University of Toronto)</p>
+                <p class="headline">B.Sc.</p>
+                <p class="explain">(Chemistry, University of Waterloo)</p>
+                <p class="headline">OCT</p>
+                <p class="explain">Ontario-Certified Teacher (<a href="https://apps.oct.ca/FindATeacher/memberdetail?id=591199">link</a>)</p>
+            </td>
+            <td width=33%>
+                <b>EXPERIENCE</b>
+                <p class="headline">7 Years</p>
+                <p class="explain">teaching in classrooms</p>
+                <p class="headline">6 Years</p>
+                <p class="explain">one-on-one tutoring</p>
+            </td>
+            <td width=33%>
+                <b>ACHIEVEMENTS</b>
+                <p class="headline">250K+ Subscribers<br />+50 million views</p>
+                <p class="explain">on ChemistNate YouTube Channel</p>
+                <p class="headline">26K+ Subscribers<br />+10 million views</p>
+                <p class="explain">on MrOldridge YouTube Channel</p>
+            </td>
+        </tr>
+    </table>
+
+    <hr />
+    <table class="main">
+        <tr>
+            <td colspan="3" width="100%">
+                <b>TESTIMONAILS</b>
+                <p class="explain">Coming soon</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td width=33%>
+                &nbsp;
+            </td>
+            <td width=33%>
+                &nbsp;
+            </td>
+            <td width=33%>
+                &nbsp;
+            </td>
+        </tr>
+    </table>
+
     <hr />
     <img src="/static/nathan-oldridge-tutor-1.jpg" width="33%" />
     <img src="/static/nathan-oldridge-tutor-2.jpg" width="33%" />
