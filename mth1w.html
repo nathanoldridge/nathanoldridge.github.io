@@ -1,178 +1,211 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>MTH1W Course Guide (by Mr. Nathan Oldridge)</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searchable Table</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-ul.nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li.nav {
-  float: left;
-}
-
-a.nav {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-a.nav:hover {
-  background-color: #111;
-}
-a.nav:active{
-    background-color: darkgreen;
-}
+        /* Custom styles for the table for better readability and a clean look */
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #f7fafc; /* Light gray background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 960px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 0.75rem; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding: 1.5rem;
+        }
+        table {
+            border-collapse: separate; /* Use separate to allow rounded corners on cells if needed */
+            border-spacing: 0;
+            width: 100%;
+        }
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0; /* Light border for rows */
+        }
+        th {
+            background-color: #edf2f7; /* Light gray for header */
+            font-weight: 600;
+            color: #2d3748; /* Darker text for header */
+            border-top-left-radius: 0.5rem; /* Rounded corners for top left header */
+            border-top-right-radius: 0.5rem; /* Rounded corners for top right header */
+        }
+        /* Ensure the last th has specific border radius */
+        th:first-child {
+            border-top-left-radius: 0.5rem;
+        }
+        th:last-child {
+            border-top-right-radius: 0.5rem;
+        }
+        tr:last-child td {
+            border-bottom: none; /* No border for the last row */
+        }
+        /* Apply rounded corners to the first and last td of the last row */
+        tbody tr:last-child td:first-child {
+            border-bottom-left-radius: 0.5rem;
+        }
+        tbody tr:last-child td:last-child {
+            border-bottom-right-radius: 0.5rem;
+        }
+        input[type="text"] {
+            border: 1px solid #cbd5e0; /* Light gray border */
+            border-radius: 0.5rem; /* Rounded corners */
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            width: 100%;
+            outline: none; /* Remove default outline */
+            transition: border-color 0.2s ease-in-out;
+        }
+        input[type="text"]:focus {
+            border-color: #63b3ed; /* Blue border on focus */
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); /* Blue shadow on focus */
+        }
     </style>
-  </head>
-  <body>
-    <!-- navigation bar -->
-    <!--
-    <ul class="nav">
-        <li class="nav"><a class="nav" href="/index.html">Home</a></li>
-        <li class="nav"><a class="nav" href="/mpm2d/">Grade 10 Math (MPM2D)</a></li>
-        <li class="nav"><a class="nav" href="/mcr3u/">MCR3U</a></li>
-        <li class="nav"><a class="nav" href="/mdm4u/">MDM4U</a></li>
-        <li class="nav"><a class="nav" href="/ics3u/">ICS3U</a></li>
-        <li class="nav"><a class="nav" href="/ics4u/">ICS4U</a></li>
-        <li class="nav"><a class="nav" href="about.html">About</a></li>
-    </ul>
-    -->
-    <!-- End navigation bar -->
-    <h1>MTH1W: Grade 9 Math (Ontario)</h1>
-    <h2>Unit 1: Number Sense</h2>
-    <h2>Unit 2: Algebra</h2>
-    <h2>Unit 3: Equations</h2>
-    <h2>Unit 4: Lines</h2>
-        Lesson 1: Reading Graphs (<a href="/lessons/MTH1W-Lines-Lesson-1-Reading-Graphs.pdf">Blank</a>, Filled in)<br />
-        Lesson 2: Equation of Line from Graph (<a href="/lessons/MTH1W-Lines-Lesson-2-Equation-From-Graph.pdf">Blank</a>, Filled in)<br />
-        Lesson 3: Slope is a Rate of Change (<a href="MTH1W-Lines-Lesson-3-Slope-is-a-Rate-of-Change.pdf">Blank</a>, Filled in)<br />
-        Lesson 4: A Formula for Slope (<a href="MTH1W-Lines-Lesson-4-Formula-for-Slope.pdf">Blank</a>, Filled in)
-        Lesson 5: Equation of a Line from Two Points (<a href="/lessons/MTH1W-Lines-Lesson-5-Equation-of-Line-from-Two-Points.pdf">Blank</a>, Filled in)<br />
-        Lesson 6: The Rule of Four (<a href="/lessons/MTH1W-Lines-Lesson-6-Rule-of-Four.pdf">Blank</a>, Filled in)
-    <h2>Unit 5: Geometry</h2>
-    <h2>Unit 6: Data, Coding, Finance</h2>
-    <!--
-    <h2>Below here, a Summary of the course.</h2>
-    <h2>from Start to Finish</h2>
-    <hr />
-    <a href="/review/">Exam Review</a>
-    <h2>What should you know going into Grade 10?</h2>
-    <ul>
-        <li>Relative size of numbers</li>
-        <li>Relative size of fractions</li>
-        <li></li>
-        <li>Adding and Subtracting Integers</li>
-        <li>Multiplying and Dividing Integers</li>
-        <li>Adding and Subtracting Fractions</li>
-        <li>Multiplying and Dividing Fractions</li>
-        <li>Converting Mixed Numbers to Improper Fractions</li>
-        <li>Converting Improper Fractions to Mixed Numbers</li>
-        <li>Division = Calculating Rate of Change</li>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-8">
 
-        <li>Positive, whole number Exponents</li>
-        <li>Zero as an Exponent</li>
-        <li>Negative, whole number exponents</li>
-        <li>Exponent Rules: Multiplying, Dividing, Power-of-a-Power</li>
-        
-<li>What is "substitute"?</li>
-<li>What is "evaluate"?</li>
-<li>What is "simplify"?</li>
-<li>What is "expand"?</li>
-<li>What is "solve"?</li>
+    <div class="container bg-white rounded-xl shadow-lg p-6 space-y-6">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Searchable Data Table</h1>
 
-<li>Collecting Like Terms</li>
-<li>Expanding (Distributive Property)</li>
-<li>Solving Equations</li>
+        <!-- Search bar input -->
+        <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search table content..."
+               class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 ease-in-out text-gray-700">
 
-<li>What makes a relationship "linear"?</li>
-<li>Graphs of Linear Relations</li>
-<li>Tables of Values of Linear Relations</li>
-<li>Equations of Linear Relations</li>
-<li>Meaning of Slope: Positive vs Negative</li>
-<li>Meaning of Slope: Large vs Small</li>
-<li>Extrapolating Linear Relations</li>
-<li>Recognize Slope is a Rate of Change</li>
-<li>Recognize y-intercept as an "Initial Value"</li>
-<li>Intersection of Two Lines in Context</li>
+        <!-- Data table -->
+        <div class="overflow-x-auto rounded-lg border border-gray-200">
+            <table id="dataTable" class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider rounded-tl-lg">Name</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Country</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider rounded-tr-lg">Occupation</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">John Doe</td>
+                        <td class="px-6 py-4 whitespace-nowrap">USA</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Software Engineer</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">Jane Smith</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Canada</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Data Scientist</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">Alice Johnson</td>
+                        <td class="px-6 py-4 whitespace-nowrap">UK</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Project Manager</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">Bob Williams</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Australia</td>
+                        <td class="px-6 py-4 whitespace-nowrap">UX Designer</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">Charlie Brown</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Germany</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Marketing Specialist</td>
+                    </tr>
+                     <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">Diana Prince</td>
+                        <td class="px-6 py-4 whitespace-nowrap">France</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Graphic Designer</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">Ethan Hunt</td>
+                        <td class="px-6 py-4 whitespace-nowrap">USA</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Secret Agent</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">Fiona Glenanne</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Ireland</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Intelligence Operative</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">George Jetson</td>
+                        <td class="px-6 py-4 whitespace-nowrap">USA</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Future Inventor</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">Hannah Montana</td>
+                        <td class="px-6 py-4 whitespace-nowrap">USA</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Pop Star</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
+    <script>
+        /**
+         * @function filterTable
+         * @description Filters the table rows based on the input from the search bar.
+         * It hides rows that do not contain the search text in any of their cells.
+         */
+        function filterTable() {
+            // Declare variables
+            let input, filter, table, tr, td, i, j, txtValue;
 
-<li>Find quartile values and draw box plots</li>
-<li>Draw scatter plots</li>
-<li>Find equations of best fit (with technology)</li>
+            // Get the search input element
+            input = document.getElementById("searchInput");
 
-<li>Pythagorean Theorem</li>
-<li>Area, Perimeter of Triangles</li>
-<li>Area, Perimeter of Quadrilaterals</li>
-<li>Area, Circumference of a Circle</li>
-<li>Area, Perimeter of Composite Shapes</li>
-<li>Surface Area</li>
-<li>Volume</li>
+            // Get the current value of the search input and convert it to uppercase
+            // for case-insensitive comparison.
+            filter = input.value.toUpperCase();
 
-<li>Converting between metric and imperial units</li>
-<li>Converting between Celsius, Fahrenheit, Kelvin</li>
+            // Get the table element
+            table = document.getElementById("dataTable");
 
-<li>Appreciation (Value Increases)</li>
-<li>Depreciation (Value Decreases)</li>
-<li>Tax and Tips (Percentages)</li>
-<li>Interest: Simple (Principal, Rate, Borrowing Time)</li>
-<li>Interest: Compound (Principal, Rate, Borrowing Time, Frequency of Compounding)</li>
-<li>Length of Borrowing Time</li>
+            // Get all table rows from the tbody.
+            // We specifically target tbody rows to exclude the header row from filtering.
+            tr = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 
-    </ul>
-    <hr />
-    <h2>Official Curriculum Expectations</h2>
-    <h3><a href="https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics/courses/mth1w/elements-of-the-grade-9-mathematics-course#strands-g9">Link to official Ontario Curriclum</a></h3>
-    <h3>My version:</h3>
-    <ul>
-        <li>A. Mathematical Thinking and Making Connections
-            <ul>
-                <li>A1. Mathematical Processes: apply the mathematical processes to develop a conceptual understanding of, and procedural fluency with, the mathematics they are learning</li>
-                <li>A2. Making Connections: make connections between mathematics and various knowledge systems, their lived experiences, and various real-life applications of mathematics, including careers</li>
-            </ul>
-        </li>
-        <li>B. Number
-            <ul>
-                <li>B1. Development of Numbers and Number Sets: demonstrate an understanding of the development and use of numbers, and make connections between sets of numbers</li>
-                <li>B2. Powers: represent numbers in various ways, evaluate powers, and simplify expressions by using the relationships between powers and their exponents</li>
-                <li>B3. Number Sense and Operations: apply an understanding of rational numbers, ratios, rates, percentages, and proportions, in various mathematical contexts, and to solve problems</li>
-            </ul>
-        </li>
-        <li>C. Algebra
-            <ul>
-                <li>C1. Algebraic Expressions and Equations: demonstrate an understanding of the development and use of algebraic concepts and of their connection to numbers, using various tools and representations</li>
-                <li>C2. Coding: apply coding skills to represent mathematical concepts and relationships dynamically, and to solve problems, in algebra and across the other strands</li>
-                <li>C3. Application of Relations: represent and compare linear and non-linear relations that model real-life situations, and use these representations to make predictions</li>
-                <li>C4. Characteristics of Relations: demonstrate an understanding of the characteristics of various representations of linear and non-linear relations, using tools, including coding when appropriate</li>
-            </ul>
-        </li>
-        <li>D: Data
-            <ul>
-                <li>D1. Collection, Representation, and Analysis of Data: describe the collection and use of data, and represent and analyse data involving one and two variables</li>
-                <li>D2. Mathematical Modelling: apply the process of mathematical modelling, using data and mathematical concepts from other strands, to represent, analyse, make predictions, and provide insight into real-life situations</li>
-            </ul>
-        </li>
-        <li>E: Geometry and Measurement
-            <ul>
-                <li>E1. Geometric and Measurement Relationships: demonstrate an understanding of the development and use of geometric and measurement relationships, and apply these relationships to solve problems, including problems involving real-life situations</li>
-            </ul>
-        </li>
-        <li>F: Financial Literacy
-            <ul>
-                <li>F1. Financial Decisions: demonstrate the knowledge and skills needed to make informed financial decisions</li>
-            </ul>
-        </li>
-    </ul>
-    -->
-    <hr />
-    <i>Page updated August 16, 2024 by Nathan</i>
-  </body>
+            // Loop through all table rows (excluding the header)
+            for (i = 0; i < tr.length; i++) {
+                let rowMatches = false; // Flag to check if the current row matches the filter
+
+                // Get all cells (td) in the current row
+                td = tr[i].getElementsByTagName("td");
+
+                // Loop through all cells in the current row
+                for (j = 0; j < td.length; j++) {
+                    // Check if the cell exists to prevent errors for rows with fewer columns
+                    if (td[j]) {
+                        // Get the text content of the current cell
+                        // Use textContent for modern browsers, fallback to innerText for older ones
+                        txtValue = td[j].textContent || td[j].innerText;
+
+                        // Check if the cell's text (converted to uppercase) contains the filter text
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            rowMatches = true; // Set flag to true if a match is found
+                            break; // No need to check other cells in this row, move to the next row
+                        }
+                    }
+                }
+
+                // If a match was found in the row, display it; otherwise, hide it
+                if (rowMatches) {
+                    tr[i].style.display = ""; // Show the table row
+                } else {
+                    tr[i].style.display = "none"; // Hide the table row
+                }
+            }
+        }
+    </script>
+</body>
 </html>
