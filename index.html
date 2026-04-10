@@ -1,190 +1,115 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Nathan Oldridge: Math Teacher in Toronto</title>
-    
-<style>
-      /* Import a modern font from Google Fonts */
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Horizontal Split</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #121212; 
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
 
-      body {
-        background-color: #121212; /* A dark, soft gray */
-        color: #e0e0e0; /* A light gray for text */
-        font-family: 'Inter', sans-serif; /* Use the imported modern font */
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-      }
+        h1 {
+            margin-top: 40px; /* Pushes name to the top */
+            margin-bottom: auto; 
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
 
-      ul.nav {
-        list-style-type: none;
-        margin: 0;
-        padding: 0 20px;
-        background-color: #1f1f1f; /* A slightly lighter shade for the navbar */
-        display: flex; /* Use flexbox for better alignment */
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      }
+        .container-wrapper {
+            display: flex;
+            align-items: center;
+            flex-grow: 2; 
+            width: 95%;
+            max-width: 1000px;
+        }
 
-      li.logo {
-        float: left;
-      }
-      li.nav {
-        float: right;
-      }
+        .container {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            align-items: stretch; /* Ensures all columns are same height */
+        }
 
-      p.regular {
-        color: #e0e0e0;
-      }
+        /* The vertical column that holds the two stacked boxes */
+        .split-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
 
-      a.nav {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 18px 20px;
-        text-decoration: none;
-        transition: background-color 0.3s ease; /* Smooth transition on hover */
-      }
+        .card {
+            flex: 1;
+            padding: 80px 10px; 
+            text-align: center;
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #bbbbbb;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-      a.nav:hover {
-        background-color: #2c2c2c;
-      }
-      a.nav:active {
-        background-color: #2c5f2c;
-      }
+        /* Adjusts the height of the split cards so they fit in the same space */
+        .split-card {
+            padding: 0 10px; /* Vertical height determined by flex-grow */
+        }
 
-      p.footer {
-        color: #777; /* Softer color for the footer text */
-        text-align: center;
-        margin-top: 40px;
-      }
+        .card:hover {
+            background: #252525;
+            border-color: #007bff;
+            color: #ffffff;
+            transform: translateY(-5px);
+        }
 
-      h1 {
-        font-size: 3rem;
-        text-align: center;
-        color: #ffffff;
-        margin-top: 50px;
-        margin-bottom: 10px;
-      }
+        .card h2 {
+            font-size: 1rem;
+            margin: 0;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-      h2 {
-        font-size: 1.5rem;
-        text-align: center;
-        color: #b0b0b0; /* A slightly different shade for the subtitle */
-        font-weight: 400;
-        margin-top: 0;
-        margin-bottom: 50px;
-      }
-
-      hr {
-        border: none;
-        height: 1px;
-        background-color: #333;
-        margin: 40px auto;
-        width: 80%;
-      }
-
-      .content-section {
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: center;
-        padding: 0 20px;
-      }
-      
-      .content-section p.explain a {
-        color: #4CAF50; /* A modern accent color for links */
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-      
-      .content-section p.explain a:hover {
-        color: #76d77e;
-      }
-
-      img.logo {
-        height: 40px; /* Adjust the logo size */
-      }
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+            }
+            .card {
+                padding: 40px 20px;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <!-- navigation bar -->
-    <ul class="nav">
-        <li class="logo"><a class="nav" href="/"><img class="logo" src="/static/nathan-oldridge-logo.png" /></a></li>
-        <li class="nav"><a class="nav" href="https://form.jotform.com/232296978560268" target="_blank">Contact Me</a></li>
-        <!--<li class="nav"><a class="nav" href="/courses.html">Subjects I Teach</a></li>-->
-        <!--<li class="nav"><a class="nav" href="/index.html">Home</a></li>-->
-        
-    </ul>
-    <!-- End navigation bar -->
-    <h1>Nathan Oldridge</h1>
-    <h2>Math Teacher in Toronto | YouTuber | Funded Trader</h2>
-    <hr />
-    <p class="explain"><a href="phones-in-school.html">Here</a> is my first draft of a position paper on why I ban smartphones from my classroom.</p>
-    <p class="explain"><a href="books-i-read-in-2025.html">Here</a> is a list of the books I've read, beginning in the Summer of 2025.</p>
-    <p class="explain"><a href="mth1w.html">Here</a> is my vibe-coded prototype for a database that lets teachers find math lesson from around the internet, with search by curriculum expectation, course, etc.</p>
-    <p class="explain">If you need to read me, there is a contact form in the header above.</p>
+</head>
+<body>
 
-    <!--
-    <table class="main">
-        <tr>
-            <td width=33%>
-                <b>CREDENTIALS</b>
-                <p class="headline">M.Sc.</p>
-                <p class="explain">(Chemistry, University of Toronto)</p>
-                <p class="headline">B.Sc.</p>
-                <p class="explain">(Chemistry, University of Waterloo)</p>
-                <p class="headline">OCT</p>
-                <p class="explain">Ontario-Certified Teacher (<a href="https://apps.oct.ca/FindATeacher/memberdetail?id=591199">link</a>)</p>
-            </td>
-            <td width=33%>
-                <b>EXPERIENCE</b>
-                <p class="headline">7 Years</p>
-                <p class="explain">teaching in classrooms</p>
-                <p class="headline">6 Years</p>
-                <p class="explain">one-on-one tutoring</p>
-            </td>
-            <td width=33%>
-                <b>ACHIEVEMENTS</b>
-                <p class="headline">270K+ Subscribers<br />+50 million views</p>
-                <p class="explain">on ChemistNate YouTube Channel</p>
-                <p class="headline">26K+ Subscribers<br />+10 million views</p>
-                <p class="explain">on MrOldridge YouTube Channel</p>
-            </td>
-        </tr>
-    </table>
-    -->
-    <hr />
-    <!--
-    <table class="main">
-        <tr>
-            <td colspan="3" width="100%">
-                <b>TESTIMONAILS</b>
-                <p class="explain">Coming soon</p>
-            </td>
-        </tr>
+    <h1>My Name</h1>
 
-        <tr>
-            <td width=33%>
-                &nbsp;
-            </td>
-            <td width=33%>
-                &nbsp;
-            </td>
-            <td width=33%>
-                &nbsp;
-            </td>
-        </tr>
-    </table>
+    <div class="container-wrapper">
+        <div class="container">
+            <a href="#" class="card"><h2>Teacher</h2></a>
+            
+            <div class="split-column">
+                <a href="#" class="card split-card"><h2>Chemistry YouTuber</h2></a>
+                <a href="#" class="card split-card"><h2>Math YouTuber</h2></a>
+            </div>
 
-    <hr />
-    <img src="/static/nathan-oldridge-tutor-1.jpg" width="33%" />
-    <img src="/static/nathan-oldridge-tutor-2.jpg" width="33%" />
-    <img src="/static/nathan-oldridge-tutor-3.jpg" width="33%" />
-    
-    <hr />
-    -->
-    <p class="footer"><i>Page updated July 3, 2025 by Nathan</i></p>
-  </body>
+            <a href="#" class="card"><h2>Tutor</h2></a>
+            <a href="#" class="card"><h2>Trader</h2></a>
+        </div>
+    </div>
+
+</body>
 </html>
