@@ -69,10 +69,29 @@
         .trader-card {
             background-image: 
                 linear-gradient(rgba(30, 30, 30, 0.8), rgba(30, 30, 30, 0.8)), 
-                url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/%E6%88%90%E5%8A%9F%E7%9A%84%E9%8C%98%E5%AD%90%E7%B7%9A%E5%BD%A2%E6%85%8B.png/640px-%E6%88%90%E5%8A%9F%E7%9A%84%E9%8C%98%E5%AD%90%E7%B7%9A%E5%BD%A2%E6%85%8B.png');
+                url('nathan-trader-2025.png');
             background-size: cover;
             background-position: center;
         }
+
+        /* Specific styling for the Teacher box with background image */
+        .teacher-card {
+            background-image: 
+                linear-gradient(rgba(30, 30, 30, 0.8), rgba(30, 30, 30, 0.8)), 
+                url('nathan-teacher-2010.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Specific styling for the Tutor box with background image */
+        .tutor-card {
+            background-image: 
+                linear-gradient(rgba(30, 30, 30, 0.8), rgba(30, 30, 30, 0.8)), 
+                url('nathan-tutor-2020.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
 
         .split-card {
             padding: 0 10px;
@@ -93,9 +112,10 @@
         }
 
         .card h2 {
-            font-size: 1rem;
+            font-size: 1.4rem;
             margin: 0;
-            font-weight: 400;
+            color: white;
+            font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 1px;
             z-index: 1; /* Ensures text stays above background */
@@ -117,14 +137,14 @@
 
     <div class="container-wrapper">
         <div class="container">
-            <a href="/teacher.html" class="card"><h2>Teacher</h2></a>
+            <a href="/teacher.html" class="card teacher-card"><h2>Teacher</h2></a>
             
             <div class="split-column">
                 <a href="https://www.youtube.com/chemistNate" class="card split-card"><h2>Chemistry YouTuber</h2></a>
                 <a href="https://www.youtube.com/mrOldridge" class="card split-card"><h2>Math YouTuber</h2></a>
             </div>
 
-            <a href="/tutor.html" class="card"><h2>Tutor</h2></a>
+            <a href="/tutor.html" class="card tutor-card"><h2>Tutor</h2></a>
             <a href="/trader.html" class="card trader-card"><h2>Trader</h2></a>
         </div>
     </div>
