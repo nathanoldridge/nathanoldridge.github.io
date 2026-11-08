@@ -1,153 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nathan Oldridge - Teacher, Tutor, YouTuber, Trader in Toronto</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #121212; 
-            color: #e0e0e0;
-            overflow-x: hidden;
-        }
-
-        h1 {
-            margin-top: 40px;
-            margin-bottom: auto; 
-            font-weight: 300;
-            letter-spacing: 2px;
-            color: #ffffff;
-            text-align: center;
-        }
-
-        .container-wrapper {
-            display: flex;
-            align-items: center;
-            flex-grow: 2; 
-            width: 95%;
-            max-width: 1000px;
-        }
-
-        .container {
-            display: flex;
-            gap: 20px;
-            width: 100%;
-            align-items: stretch;
-        }
-
-        .split-column {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .card {
-            flex: 1;
-            padding: 80px 10px; 
-            text-align: center;
-            background: #1e1e1e;
-            border: 1px solid #333;
-            border-radius: 12px;
-            text-decoration: none;
-            color: #bbbbbb;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Specific styling for the Trader box with background image */
-        .trader-card {
-            background-image: 
-                linear-gradient(rgba(30, 30, 30, 0.8), rgba(30, 30, 30, 0.8)), 
-                url('nathan-trader-2025.png');
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* Specific styling for the Teacher box with background image */
-        .teacher-card {
-            background-image: 
-                linear-gradient(rgba(30, 30, 30, 0.8), rgba(30, 30, 30, 0.8)), 
-                url('nathan-teacher-2010.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* Specific styling for the Tutor box with background image */
-        .tutor-card {
-            background-image: 
-                linear-gradient(rgba(30, 30, 30, 0.8), rgba(30, 30, 30, 0.8)), 
-                url('nathan-tutor-2020.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-
-        .split-card {
-            padding: 0 10px;
-        }
-
-        .card:hover {
-            background-color: #252525;
-            border-color: #007bff;
-            color: #ffffff;
-            transform: translateY(-5px);
-        }
-
-        /* Hover effect for Trader card to slightly lighten the image */
-        .trader-card:hover {
-            background-image: 
-                linear-gradient(rgba(30, 30, 30, 0.6), rgba(30, 30, 30, 0.6)), 
-                url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/%E6%88%90%E5%8A%9F%E7%9A%84%E9%8C%98%E5%AD%90%E7%B7%9A%E5%BD%A2%E6%85%8B.png/640px-%E6%88%90%E5%8A%9F%E7%9A%84%E9%8C%98%E5%AD%90%E7%B7%9A%E5%BD%A2%E6%85%8B.png');
-        }
-
-        .card h2 {
-            font-size: 1.4rem;
-            margin: 0;
-            color: white;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            z-index: 1; /* Ensures text stays above background */
-        }
-
-        @media (max-width: 800px) {
-            .container {
-                flex-direction: column;
-            }
-            .card {
-                padding: 40px 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nathan Oldridge → Teacher in Toronto | M.Sc., B.Ed., OCT</title>
+  <meta name="description" content="Nathan Oldridge, M.Sc., B.Ed., OCT → an Ontario-certified teacher in Toronto, currently teaching SCH4U Chemistry, ICS3C, ICS3U, ICS4U and ICD2O. YouTube: ChemistNate and Mr Oldridge.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <h1>T Nathan Oldridge<br />M.Sc., B.Ed., OCT</h1>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">Nathan Oldridge <span>· M.Sc., B.Ed., OCT</span></a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
 
-    <div class="container-wrapper">
-        <div class="container">
-            <a href="/teacher.html" class="card teacher-card"><h2>Teacher</h2></a>
-            
-            <div class="split-column">
-                <a href="https://www.youtube.com/chemistNate" class="card split-card"><h2>Chemistry YouTuber</h2></a>
-                <a href="https://www.youtube.com/mrOldridge" class="card split-card"><h2>Math YouTuber</h2></a>
-            </div>
-
-            <a href="/tutor.html" class="card tutor-card"><h2>Tutor</h2></a>
-            <a href="/trader.html" class="card trader-card"><h2>Trader</h2></a>
-        </div>
+<section class="hero">
+  <div class="wrap hero-flex">
+    <div>
+    <p class="eyebrow">Toronto · Ontario-certified teacher</p>
+    <h1>Nathan Oldridge, <em>M.Sc., B.Ed., OCT</em></h1>
+    <p class="lede">I'm a teacher in Toronto, Canada. This semester I'm teaching SCH4U Chemistry, ICS3C, ICS3U and ICS4U Computer Science, and ICD2O Digital Technology.</p>
+    <div class="cta-row">
+      <a class="btn" href="teaching.html">See what I teach</a>
+      <a class="btn secondary" href="https://www.youtube.com/chemistNate">ChemistNate on YouTube</a>
     </div>
+    </div>
+    <img class="hero-photo" src="nathan-headshot.jpg" alt="Nathan Oldridge, smiling, wearing a dark shirt and grey plaid blazer">
+  </div>
+</section>
+
+<main class="wrap">
+
+  <h2>What I teach now</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>SCH4U Chemistry</h3>
+      <p>Grade 12 Chemistry → organic chemistry, thermochemistry and rates, equilibrium and acids / bases, and electrochemistry. I've built full 15-lesson units for each, with worked examples and answer keys.</p>
+    </div>
+    <div class="card">
+      <h3>Computer Science</h3>
+      <p>ICS3C, ICS3U and ICS4U → Python, Java, and the ideas underneath them: data structures, efficiency, and building real programs.</p>
+    </div>
+    <div class="card">
+      <h3>ICD2O Digital Technology</h3>
+      <p>Grade 10 digital technology → hands-on, practical work with technology.</p>
+    </div>
+  </div>
+  <p><a href="teaching.html">Teaching resources and lesson materials →</a></p>
+
+  <h2>YouTube channels</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>ChemistNate</h3>
+      <p>Chemistry lessons, including a long series of Lewis structure videos.</p>
+      <p><a href="https://www.youtube.com/chemistNate">Watch ChemistNate →</a></p>
+    </div>
+    <div class="card">
+      <h3>Mr Oldridge</h3>
+      <p>Math lessons.</p>
+      <p><a href="https://www.youtube.com/mrOldridge">Watch Mr Oldridge →</a></p>
+    </div>
+  </div>
+
+  <h2>For teachers &amp; students</h2>
+  <p>I publish teaching resources → chemistry lesson materials, math resources, and a lesson directory → on the <a href="teaching.html">Teaching page</a>. They're free to use.</p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Nathan Oldridge, M.Sc., B.Ed., OCT</strong> → Teacher in Toronto, Canada.</p>
+    <p><a href="teaching.html">Teaching</a> · <a href="about.html">About</a> · <a href="https://www.youtube.com/chemistNate">ChemistNate on YouTube</a> · <a href="https://www.youtube.com/mrOldridge">Mr Oldridge on YouTube</a> · <a href="https://www.linkedin.com/in/nathanoldridge/">LinkedIn</a></p>
+  </div>
+</footer>
 
 </body>
 </html>
